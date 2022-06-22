@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+* {
+	margin:0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+h2 {
+	font-family: "Roboto Bold", Roboto;
+	font-size: 30px;
+	color: #343537
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	color: #0C0C0C;
+	font-family: 'Transducer Medium', Transducer;
+	font-size: 85px;
+	font-weight: normal;
+}
+
+button {
+	border: none;
+	background-color: rgba(255,255,255,0);
+	border-radius: 64px;
+}
+
+#allCollectionsButton:hover {
+	filter: drop-shadow(0px 1px 2px rgba(42,42,42,0.4));
+}
+
+p1 {
+	padding-top: 5%;
+	color: #2A2A2A;
+	font-family: 'Roboto', Roboto;
+	font-size: 25px;
+}
+
+p2 {
+	color: #2A2A2A;
+	font-family: 'Roboto Light', Roboto;
+	font-size: 20px;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+}
+.moveOn {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.zstackParent {
+	position: relative;
+}
+
+.zstackLeftChild {
+	position: absolute;
+	top: var(--top, 0);
+	bottom: var(--bottom, 0);
+	right: var(--right, 0);
+	left: var(--left, 0);
+}
+
+.zstackCentreChild {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hstack {
+	width:100%;
+	display: flex;
+  	flex-direction: row;
+	align-items: center;
+}
+
+.vstack {
+	width: 100%;
+	display: flex;
+  	flex-direction: column;
+	align-items: center;
+}
+
+#set-height {
+  display: block;
+}
+
+.pageContent {
+	position: absolute;
+	z-index: -1;
+}
+
+.pageContentVisible {
+	top: 26100px;
+	z-index:5;
+}
+
+
+#navBar {
+	width: 93%;
+}
+
+#navBarBase {
+	width: 100%;
+}
+
+#navBarItems {
+	width: 92%;
+}
+
+#navBarItems a:hover {
+	filter: drop-shadow(0px 2px 5px rgba(52, 53, 55, 0.4));
+}
+
+#footer {
+	width:100%;
+}
+
+#footerItems {
+	width: 100%;
+}
+
+#footerItems a h5 {
+	font-family: "Roboto Medium", Roboto;
+	font-size: 30px;
+	color: #343537
+}
+
+#footerItems a:hover {
+	filter: drop-shadow(0px 2px 5px rgba(52, 53, 55, 0.4));
+}
+
+.hCentre {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+#Top Collection Title {
+	left: 500px;
+}
+
+#topCollectionTitle h3 {
+	font-family: "EthnocentricRg-Regular", Ethnocentric;
+	font-size: 30px;
+	color: #2A2A2A;
+}
+
+#topCollectionTitle h3 span {
+	font-family: "Roboto Black", Roboto;
+	font-size: 30px;
+	color: #2A2A2A;
+	padding-left: 4%;
+}
+
+#allCollectionsText h3 {
+	font-family: "EthnocentricRg-Regular", Ethnocentric;
+	font-size: 20px;
+	color: #2A2A2A;
+}
+
+.productRow a:hover {
+	filter: drop-shadow(0px 2px 10px rgba(42, 42, 42, 0.4));
+}
+
+#noResultsAlert p {
+	font-family: 'Bitcount Mono Single Bold Square', Bitcount; 
+	font-size: 30px; 
+	color: #0C0C0C;
+	position: relative;
+	bottom: 22px;
+	text-align: center;
+}
+
+#searchInput {
+	font-family: 'Roboto Regular', Roboto;
+	font-size: 26px; 
+	color: #343537;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 83.5%;
+	border: none;
+	margin: 5px;
+}
+
+#searchInput:focus {
+	outline-width: 0;
+}
+
+
+#searchButton:hover {
+	filter: drop-shadow(0px 2px 5px rgba(52, 53, 55, 0.4));
+}

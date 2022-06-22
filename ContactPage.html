@@ -1,0 +1,197 @@
+<!doctype html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>Contact Pixelloid</title>
+	<link href="SupportInfoPages_Stylesheet.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="Resources/Favicon/Pixelloid icon.png">
+	<script>
+		function getMailtoUrl(to, subject, body) {
+			var args = [];
+			if (typeof subject !== 'undefined') {
+				args.push('subject=' + encodeURIComponent(subject));
+			}
+			if (typeof body !== 'undefined') {
+				args.push('body=' + encodeURIComponent(body))
+			}
+			
+			var url = 'mailto:' + encodeURIComponent(to);
+			if (args.length > 0) {
+				url += '?' + args.join('&');
+			}
+			return url;
+		}
+		
+		function createSupportEmail(reason, category, fname, lname, message) {
+			const subject = category.value + "- " + reason.value;
+			const body = "Hi Pixelloid Team, \n \n" + message.value + "\n \n Kind Regards, \n" + fname.value + " " + lname.value;
+			window.location.href = getMailtoUrl("support@pixelloid.com.au", subject, body);
+		}
+	</script>
+</head>
+
+<body>
+    <div id="navBar" class="zstackParent">
+		<img id="navBarBase" src="Resources/Nav Bar/Header_base.png" alt="Header">
+	   	<div id="navBarItems" class="zstackLeftChild hstack">
+		    <spacer style="width: 2%"></spacer>
+		    <a href="Index.html"><img src="Resources/Nav Bar/Pixelloid icon.png" style="width: 95%; min-width: 116px; min-height: 65px; height: 95%; max-height: 77px; max-width: 205.5px; max-height: 115.5px;" alt="Pixelloid Icon"></a>
+		    <spacer style="width: 2%"></spacer>
+		    <a href="CategoryPage.html?category=Pixels"><h2>Pixels</h2></a>
+		    <spacer style="width: 5%"></spacer>
+		    <a href="CategoryPage.html?category=Worlds"><h2>Worlds</h2></a>
+		    <spacer style="width: 5%"></spacer>
+		    <a href="CategoryPage.html?category=Entities"><h2>Entities</h2></a>
+		    <spacer style="width: 5%;"></spacer>
+		    <a href="CategoryPage.html?category=Catchphrases"><h2>Catchphrases</h2></a>
+		    <spacer style="width: 50%"></spacer>
+		   <a href="SearchPage.html"><svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45"
+   height="45"
+   viewBox="0 0 500.00001 500.00001"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Search_Icon.svg">
+  <defs
+     id="defs4164" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.954"
+     inkscape:cx="250"
+     inkscape:cy="250"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4167">
+    <rdf:rdf>
+      <cc:work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36216)">
+    <g
+       id="g1400"
+       transform="translate(-4.3609793,-7.6704785)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4714"
+         d="M 232.83952,614.96702 A 154.04816,154.04794 0 0 0 78.79153,769.01382 154.04816,154.04794 0 0 0 232.83952,923.06184 154.04816,154.04794 0 0 0 386.88751,769.01382 154.04816,154.04794 0 0 0 232.83952,614.96702 Z m 0,26.77613 A 129.95832,127.2707 0 0 1 362.79832,769.01382 129.95832,127.2707 0 0 1 232.83952,896.28449 129.95832,127.2707 0 0 1 102.88194,769.01382 129.95832,127.2707 0 0 1 232.83952,641.74315 Z"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         ry="18.08342"
+         rx="33.249443"
+         transform="matrix(0.65316768,0.7572133,-0.60689051,0.79478545,0,0)"
+         y="319.55432"
+         x="794.8775"
+         height="36.16684"
+         width="173.02675"
+         id="rect4721"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+    </g>
+  </g>
+</svg></a>	
+	   	</div>
+	</div>
+	<h1 id="PageTitle">Contact Pixelloid</h1>
+	<div id="pageContent">
+		<div class="subheading" style="padding-bottom: 2%">
+			<p1>Connect with Pixelloid</p1>
+		</div>
+		<form onsubmit="createSupportEmail(reason, category, fname, lname, message)">
+			<div style="margin-bottom: 2%">
+				<div class="hstackTopAligned">
+					<div class="vstackLeftAligned" style="width: 49%">
+						<p2>Reason for Contact</p2>
+						<input type="text" name="reason">
+					</div>
+					<spacer style="width: 2%;"></spacer>
+					<div class="vstackLeftAligned" style="width: 49%">
+						<p2>Category</p2>
+						<input list="categories" name="category">
+						<datalist id="categories">
+							<option value="Purchasing Support">
+							<option value="Product Range">
+							<option value="Sales">
+							<option value="Broken Download">
+							<option value="Feature/Product Request">
+							<option value="Business Collaboration">
+						</datalist>
+					</div>
+				</div>
+			</div>
+			<div style="margin-bottom: 2%">
+				<div class="hstackTopAligned">
+					<div class="vstackLeftAligned" style="width: 49%">
+						<p2>First Name</p2>
+						<input type="text" name="fname">
+					</div>
+					<spacer style="width: 2%;"></spacer>
+					<div class="vstackLeftAligned" style="width: 49%">
+						<p2>Last Name</p2>
+						<input type="text" name="lname">
+					</div>
+				</div>
+			</div>
+			<div style="margin-bottom: 2%">
+				<div class="vstackLeftAligned" style="width: 100%">
+					<p2>Message</p2>
+					<textarea name="message"></textarea>
+				</div>
+			</div>
+			<div style="margin-bottom: 5%">
+				<div class="hstack">
+					<input id="submitButton" type="submit" value="Contact Us">
+					<input id="resetButton" type="reset" value="Reset">
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="footer">
+		<img src="Resources/Footer/Footer Fade 1.png" alt="Footer Fade" width="100%" height="8">
+		<img src="Resources/Footer/Footer Fade 2.png" alt="Footer Fade" width="100%" height="8">
+		<div class="zstackParent">
+			<img src="Resources/Footer/Footer Base.png" alt="Footer Base" width="100%" height="72">
+	   		<div id="footerItems" class="zstackLeftChild hstack">
+				<spacer style="width:3%"></spacer>
+				<img src="Resources/Footer/Footer Logo and Icon.png" alt="Pixelloid Logo" style="width:20%;">
+	    		<spacer style="width:50%"></spacer>
+	    		<a href="AboutPage.html"><h5>About</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	    		<a href="ContactPage.html"><h5>Contact</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	    		<a href="SitemapPage.html"><h5>Sitemap</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	   	 		<a href="T&CsPage.html"><h5>T&amp;Cs</h5></a>
+				<spacer style="width:3%"></spacer>
+	   		</div>
+		</div>
+	</div>
+</body>
+</html>

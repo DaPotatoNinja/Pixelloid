@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Product Details</title>
+	<link href="ProductDetails_Stylesheet.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="Resources/Favicon/Pixelloid icon.png">
+	<script src="Products.js"></script>
+	<script>
+		const product = getQueryVariable("product").split("+").join(" ");
+		const galleryItems = products[product]["slides"];
+	</script>
+</head>
+	
+<body>
+    <div id="navBar" class="zstackParent">
+		<img id="navBarBase" src="Resources/Nav Bar/Header_base.png" alt="Header">
+	   	<div id="navBarItems" class="zstackLeftChild hstack">
+		    <spacer style="width: 2%"></spacer>
+		    <a href="Index.html"><img src="Resources/Nav Bar/Pixelloid icon.png" style="width: 95%; min-width: 116px; min-height: 65px; height: 95%; max-height: 77px; max-width: 205.5px; max-height: 115.5px;" alt="Pixelloid Icon"></a>
+		    <spacer style="width: 2%"></spacer>
+		    <a href="CategoryPage.html?category=Pixels"><h2>Pixels</h2></a>
+		    <spacer style="width: 5%"></spacer>
+		    <a href="CategoryPage.html?category=Worlds"><h2>Worlds</h2></a>
+		    <spacer style="width: 5%"></spacer>
+		    <a href="CategoryPage.html?category=Entities"><h2>Entities</h2></a>
+		    <spacer style="width: 5%;"></spacer>
+		    <a href="CategoryPage.html?category=Catchphrases"><h2>Catchphrases</h2></a>
+		    <spacer style="width: 50%"></spacer>
+		   <a href="SearchPage.html"><svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45"
+   height="45"
+   viewBox="0 0 500.00001 500.00001"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Search_Icon.svg">
+  <defs
+     id="defs4164" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.954"
+     inkscape:cx="250"
+     inkscape:cy="250"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4167">
+    <rdf:rdf>
+      <cc:work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36216)">
+    <g
+       id="g1400"
+       transform="translate(-4.3609793,-7.6704785)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4714"
+         d="M 232.83952,614.96702 A 154.04816,154.04794 0 0 0 78.79153,769.01382 154.04816,154.04794 0 0 0 232.83952,923.06184 154.04816,154.04794 0 0 0 386.88751,769.01382 154.04816,154.04794 0 0 0 232.83952,614.96702 Z m 0,26.77613 A 129.95832,127.2707 0 0 1 362.79832,769.01382 129.95832,127.2707 0 0 1 232.83952,896.28449 129.95832,127.2707 0 0 1 102.88194,769.01382 129.95832,127.2707 0 0 1 232.83952,641.74315 Z"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         ry="18.08342"
+         rx="33.249443"
+         transform="matrix(0.65316768,0.7572133,-0.60689051,0.79478545,0,0)"
+         y="319.55432"
+         x="794.8775"
+         height="36.16684"
+         width="173.02675"
+         id="rect4721"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+    </g>
+  </g>
+</svg></a>	
+	   	</div>
+	</div>
+	<div id="pageContent" class="hstackTopAligned" style="margin-top: 5%; margin-bottom: 2%;">
+		<div style="width: 5%"></div>
+		<div style="width: 42.5%">
+			<div id="gallery" class="zstackParent" style="width: 100%;">
+				<img src="Resources/Product Details/Gallery Border.png" alt="Gallery Base">
+				<div class="zstackCentreChild" id="galleryViewer">
+					<div><iframe id="galleryIframe" style="width:450px;height:450px;" frameborder="0" mozallowfullscreen webkitallowfullscreen
+        			allowfullscreen ></iframe></div>
+				</div>
+				<div id="galleryButtons"> 
+					<button class="zstackCentreChild" id="rightSlide" >
+						<svg xmlns="http://www.w3.org/2000/svg" width="47" height="73" viewBox="0 0 47 73">
+  						<g id="Group_30" data-name="Group 30" transform="translate(-1291 -1560)">
+    					<rect id="Rectangle_261" data-name="Rectangle 261" width="47" height="73" rx="23.5" transform="translate(1291 1560)" fill="#404040"/>
+    					<g id="Group_5" data-name="Group 5" transform="translate(1309.49 1581.159)">
+      					<line id="Line_1" data-name="Line 1" x2="14.02" y2="15.66" transform="translate(0)" fill="none" stroke="#bfbebd" stroke-linecap="round" stroke-width="7"/>
+     					<line id="Line_2" data-name="Line 2" y1="14.861" x2="14.02" transform="translate(0 15.82)" fill="none" stroke="#bfbebd" stroke-linecap="round" stroke-width="7"/>
+    					</g>
+  						</g>
+						</svg>
+					</button>
+					<button class="zstackCentreChild" id="leftSlide" >
+						<svg xmlns="http://www.w3.org/2000/svg" width="47" height="73" viewBox="0 0 47 73">
+  						<g id="Group_31" data-name="Group 31" transform="translate(-1290.623 -1560)">
+    					<rect data-name="Rectangle 261" width="47" height="73" rx="23.5" transform="translate(1290.623 1560)" fill="#404040"/>
+    					<g data-name="Group 5" transform="translate(1305.374 1581.159)">
+      					<line data-name="Line 1" x1="13.907" y2="15.66" transform="translate(0)" fill="none" stroke="#bfbebd" stroke-linecap="round" stroke-width="7"/>
+      					<line data-name="Line 2" x1="13.907" y1="14.861" transform="translate(0 15.82)" fill="none" stroke="#bfbebd" stroke-linecap="round" stroke-width="7"/>
+    					</g>
+ 						</g>
+						</svg>
+					</button>
+					<div id="slideButtons" class="zstackCentreChild">
+						<div class="hstack">
+							<button id="firstSlide" class="activeButton" value="0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="75" height="11" viewBox="0 0 75 11">
+  									<rect data-name="Rectangle 260" width="75" height="11" rx="5.5"/>
+								</svg>
+							</button>
+							<button id="secondSlide" value="1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="75" height="11" viewBox="0 0 75 11">
+  									<rect data-name="Rectangle 260" width="75" height="11" rx="5.5"/>
+								</svg>
+							</button>
+							<button id="thirdSlide" value="2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="75" height="11" viewBox="0 0 75 11">
+  									<rect data-name="Rectangle 260" width="75" height="11" rx="5.5"/>
+								</svg>
+							</button>
+							<button id="fourthSlide" value="3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="75" height="11" viewBox="0 0 75 11">
+  									<rect data-name="Rectangle 260" width="75" height="11" rx="5.5"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<script>
+						const gallerySlideButtons = ["firstSlide", "secondSlide", "thirdSlide", "fourthSlide"]
+						var currentSlideIndex = 0;
+						document.getElementById("galleryIframe").src = galleryItems[currentSlideIndex];
+						
+						function galleryGoSlide(event) {
+							currentSlideIndex = Number(event.currentTarget.value);
+							document.getElementById("galleryIframe").src = galleryItems[currentSlideIndex];
+							gallerySlideButtons.forEach(setActiveSlideButton);
+						}
+						function setActiveSlideButton(value) {
+							if (value == gallerySlideButtons[currentSlideIndex]) {
+								document.getElementById(value).classList.add('activeButton');
+							} else {
+								document.getElementById(value).classList.remove('activeButton');
+							}
+						}
+						function galleryRightSlide() {
+							if (currentSlideIndex == 3) {
+								currentSlideIndex = 0;
+							} else {
+								currentSlideIndex += 1;
+							}
+							document.getElementById("galleryIframe").src = galleryItems[currentSlideIndex];
+							gallerySlideButtons.forEach(setActiveSlideButton);
+						}
+						function galleryLeftSlide() {
+							if (currentSlideIndex == 0) {
+								currentSlideIndex = 3;
+							} else {
+								currentSlideIndex -= 1;
+							}
+							document.getElementById("galleryIframe").src = galleryItems[currentSlideIndex];
+							gallerySlideButtons.forEach(setActiveSlideButton);
+						}
+						firstSlide.onclick = galleryGoSlide;
+						secondSlide.onclick = galleryGoSlide;
+						thirdSlide.onclick = galleryGoSlide;
+						fourthSlide.onclick = galleryGoSlide;
+						rightSlide.onclick = galleryRightSlide;
+						leftSlide.onclick = galleryLeftSlide;
+					</script>
+				</div>
+			</div>
+			<div class="zstackParent">
+				<img style="margin-top: 5%" src="Resources/Product Details/Specs Base.png" alt="Specs Base" width="100%">
+				<h4 class="zstackLeftChild" style="margin-left: 4%;margin-top: 2%">Specs</h4>
+				<p2 class="zstackLeftChild" style="margin-left: 4%;margin-top: 13.7%;">Collection:</p2>
+				<p1 id="productCollection" class="zstackLeftChild" style="margin-left: 25%;margin-top: 13.3%;">placeholder</p1>
+				<p2 class="zstackLeftChild" style="margin-left: 4%;margin-top: 22%;">Release<br>Year:</p2>
+				<p1 id="productRelease" class="zstackLeftChild" style="margin-left: 25%;margin-top: 24.5%;">placeholder</p1>
+				<p2 class="zstackLeftChild" style="margin-left: 54%;margin-top: 13.57%;">Style:</p2>
+				<p1 id="productStyle" class="zstackLeftChild" style="margin-left: 73%;margin-top: 13.57%;width:100%">placeholder</p1>
+				<p2 class="zstackLeftChild" style="margin-left: 54%;margin-top: 24.5%;">Medium:</p2>
+				<p1 id="productMedium" class="zstackLeftChild" style="margin-left: 73%;margin-top: 24.5%;">placeholder</p1>
+			</div>
+			<div class="zstackParent">
+				<img style="margin-top: 5%" src="Resources/Product Details/Tags Base.png" alt="Tags Base" width="100%">
+				<h4 class="zstackLeftChild" style="margin-left: 4%;margin-top: 2%">Tags</h4>
+				<div class="zstackCentreChild" style="width:100%;height: 100%;">
+					<div id="tagContainer">
+						<a href="#" id="tagLink"></a>
+						<p5 id="tagText" class="zstackCentreChild" style="margin-top: -3%;">tag</p5>
+						<div id="tag" class="zstackParent" style="margin-left: 2%">
+							<svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" viewBox="0 0 75 30">
+							  <g fill="#f4f4f4" stroke="#bfbebd" stroke-width="2">
+							    <rect width="70" height="25" rx="10" stroke="none"/>
+							    <rect x="1" y="1" width="70" height="25" rx="9" fill="none"/>
+							  </g>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="width: 2%"></div>
+		<div style="width: 50%">
+			<h3 id="categoryName">Category Name</h3>
+			<h1 id="productName">Product Name</h1>
+			<div class="zstackParent">
+				<img src="Resources/Product Details/Purchase Base.png" alt="Gallery Base" width="100%">
+				<p1 class="zstackLeftChild" style="margin-left: 4%;margin-top: 5.5%">Quantity:</p1>
+				<input id="quantityInput" class="zstackLeftChild" value="1" type="number" in="1" max="10">
+				<p1 class="zstackLeftChild" style="margin-left: 4%;margin-top: 18%">Price:</p1>
+				<h4 id="productPrice" class="zstackLeftChild" style="margin-left: 13%;margin-top: 16%">⟁15</h4>
+				<div id="purchaseButtons" class="zstackCentreChild" style="margin-top: 10%;">
+					<div class="hstack">
+						<button id="buyNowButton">
+							<div class="zstackParent">
+								<svg xmlns="http://www.w3.org/2000/svg" width="303" height="80" viewBox="0 0 303 80">
+								  <g id="Rectangle_425" data-name="Rectangle 425" fill="#404040" stroke="#bfbebd" stroke-width="3">
+								    <rect width="303" height="80" rx="30" stroke="none"/>
+								    <rect x="1.5" y="1.5" width="300" height="77" rx="28.5" fill="none"/>
+								  </g>
+								</svg>
+								<p4 class="zstackCentreChild" style="color: #FFFFFF;">Buy now</p4>
+							</div>
+						</button>
+						<button id="bagButton">
+							<div class="zstackParent">
+								<svg xmlns="http://www.w3.org/2000/svg" width="303" height="80" viewBox="0 0 303 80">
+								  <g id="Rectangle_425" data-name="Rectangle 425" fill="#404040" stroke="#bfbebd" stroke-width="3">
+								    <rect width="303" height="80" rx="30" stroke="none"/>
+								    <rect x="1.5" y="1.5" width="300" height="77" rx="28.5" fill="none"/>
+								  </g>
+								</svg>
+								<p4 class="zstackCentreChild" style="color: #FFFFFF;">Buy now</p4>
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="zstackParent">
+				<img style="margin-top: 4%" src="Resources/Product Details/Description Base.png" alt="Description Base" width="100%">
+				<h4 class="zstackLeftChild" style="margin-left: 4%;margin-top: 2%">Description</h4>
+				<p1 id="productDescription" class="zstackLeftChild" style="margin-top:11%;margin-left: 4%;margin-right:4%;line-height: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p1>
+			</div>
+			<div class="zstackParent">
+				<img style="margin-top: 4%" src="Resources/Product Details/More Products Base.png" alt="More Products Base" width="100%">
+				<h4 id="moreHeading" class="zstackLeftChild" style="margin-left: 4%;margin-top: 2%">More from this collection/collection</h4>
+				<div class="zstackCentreChild" style="width:100%;height: 100%;">
+					<div id="moreProducts" class="hstackTopAligned" style="margin-top: 13%;">
+						<spacer style="width: 6.75%"></spacer>
+						<a id="firstItemOutput" href="#" style="width: 25%;">
+							<div class="vstack" style="align-items:baseline;">
+								<img id="firstItemImage" src="Resources/Category Page/Item.png" alt="itemImage" width="100%">
+								<p1 style="padding-top: 10%;" id="firstItemName" >Placeholder</p1>
+								<p3 id="firstItemPrice" >⟁10</p3>
+							</div>
+						</a>
+						<spacer style="width: 6.75%"></spacer>
+						<a id="secondItemOutput" href="#" style="width: 25%;">
+							<div class="vstack" style="align-items:baseline;">
+								<img id="secondItemImage" src="Resources/Category Page/Item.png" alt="itemImage" width="100%">
+								<p1 style="padding-top: 10%;" id="secondItemName" >Placeholder</p1>
+								<p3 id="secondItemPrice" >⟁10</p3>
+							</div>
+						</a>
+						<spacer style="width: 6.75%"></spacer>
+						<a id="thirdItemOutput" href="#" style="width: 25%;">
+							<div class="vstack" style="align-items:baseline;">
+								<img id="thirdItemImage" src="Resources/Category Page/Item.png" alt="itemImage" width="100%">
+								<p1 style="padding-top: 10%;" id="thirdItemName" >Placeholder</p1>
+								<p3 id="thirdItemPrice" >⟁10</p3>
+							</div>
+						</a>
+						<spacer style="width: 6.75%"></spacer>
+						<a id="fourthItemOutput" href="#" style="width: 25%;">
+							<div class="vstack" style="align-items:baseline;">
+								<img id="fourthItemImage" src="Resources/Category Page/Item.png" alt="itemImage" width="100%">
+								<p1 style="padding-top: 10%;" id="fourthItemName" >Placeholder</p1>
+								<p3 id="fourthItemPrice" >⟁10</p3>
+							</div>
+						</a>
+						<spacer style="width: 6.75%"></spacer>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div style="width: 5%"></div>
+	</div>
+	<script src="Product Details.js"></script>
+	<div id="footer">
+		<img src="Resources/Footer/Footer Fade 1.png" alt="Footer Fade" width="100%" height="8">
+		<img src="Resources/Footer/Footer Fade 2.png" alt="Footer Fade" width="100%" height="8">
+		<div class="zstackParent">
+			<img src="Resources/Footer/Footer Base.png" alt="Footer Base" width="100%" height="72">
+	   		<div id="footerItems" class="zstackLeftChild hstack">
+				<spacer style="width:3%"></spacer>
+				<img src="Resources/Footer/Footer Logo and Icon.png" alt="Pixelloid Logo" style="width:20%;">
+	    		<spacer style="width:50%"></spacer>
+	    		<a href="AboutPage.html"><h5>About</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	    		<a href="ContactPage.html"><h5>Contact</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	    		<a href="SitemapPage.html"><h5>Sitemap</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	   	 		<a href="T&CsPage.html"><h5>T&amp;Cs</h5></a>
+				<spacer style="width:3%"></spacer>
+	   		</div>
+		</div>
+	</div>
+	<script src="Purchase.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,325 @@
+<!doctype html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>Search Collections</title>
+	<script src="Products.js"></script>
+	<script>
+		if (getQueryVariable("category") != false) {
+			var searchInput = (getQueryVariable("category"));
+		} else {
+			var searchInput = getQueryVariable("searchInput");
+		}
+		var mainResults = (searchProducts(products, searchInput));
+		var collectionResults = searchCollectionsFromResults(mainResults);
+	</script>
+	<link href="SearchPage_Stylesheet.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="Resources/Favicon/Pixelloid icon.png">
+</head>
+
+<body>
+	<script>
+		var productsOfCollectionResults = [];
+		var displayedCollections = [];
+		for (var collection in collectionResults) {
+			for (var product in (searchProductsOfCollection(products, (collectionResults[collection][0])))) {
+				let productArray = [(((searchProductsOfCollection(products, (collectionResults[collection][0]))))[product]), 2]
+				productsOfCollectionResults.push(productArray);
+			}
+			displayedCollections.push(collectionResults[collection][0]);
+		}
+	</script>
+	<div id="navBar" class="zstackParent">
+		<img id="navBarBase" src="Resources/Nav Bar/Header_base.png" alt="Header">
+	   	<div id="navBarItems" class="zstackLeftChild hstack">
+		    <spacer style="width: 2%"></spacer>
+		    <a href="Index.html"><img src="Resources/Nav Bar/Pixelloid icon.png" style="width: 95%; min-width: 116px; min-height: 65px; height: 95%; max-height: 77px; max-width: 205.5px; max-height: 115.5px;" alt="Pixelloid Icon"></a>
+		    <spacer style="width: 2%"></spacer>
+		    <a href="CategoryPage.html?category=Pixels"><h2>Pixels</h2></a>
+		    <spacer style="width: 5%"></spacer>
+		    <a href="CategoryPage.html?category=Worlds"><h2>Worlds</h2></a>
+		    <spacer style="width: 5%"></spacer>
+		    <a href="CategoryPage.html?category=Entities"><h2>Entities</h2></a>
+		    <spacer style="width: 5%;"></spacer>
+		    <a href="CategoryPage.html?category=Catchphrases"><h2>Catchphrases</h2></a>
+		    <spacer style="width: 50%"></spacer>
+		   <a href="SearchPage.html"><svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45"
+   height="45"
+   viewBox="0 0 500.00001 500.00001"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Search_Icon.svg">
+  <defs
+     id="defs4164" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.954"
+     inkscape:cx="250"
+     inkscape:cy="250"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4167">
+    <rdf:rdf>
+      <cc:work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-552.36216)">
+    <g
+       id="g1400"
+       transform="translate(-4.3609793,-7.6704785)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4714"
+         d="M 232.83952,614.96702 A 154.04816,154.04794 0 0 0 78.79153,769.01382 154.04816,154.04794 0 0 0 232.83952,923.06184 154.04816,154.04794 0 0 0 386.88751,769.01382 154.04816,154.04794 0 0 0 232.83952,614.96702 Z m 0,26.77613 A 129.95832,127.2707 0 0 1 362.79832,769.01382 129.95832,127.2707 0 0 1 232.83952,896.28449 129.95832,127.2707 0 0 1 102.88194,769.01382 129.95832,127.2707 0 0 1 232.83952,641.74315 Z"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         ry="18.08342"
+         rx="33.249443"
+         transform="matrix(0.65316768,0.7572133,-0.60689051,0.79478545,0,0)"
+         y="319.55432"
+         x="794.8775"
+         height="36.16684"
+         width="173.02675"
+         id="rect4721"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+    </g>
+  </g>
+</svg></a>	
+	   	</div>
+	</div>
+	<div class="zstackParent">
+		<img id="topPanel" src="Resources/Category Page/Top Panel Search.png" alt="Top Panel">
+		<div class="zstackCentreChild vstack">
+			<h1 id="searchTitle" style="padding-bottom: 2%; text-align: center">Search Pixelloid<br>Collections</h1>
+			<div id="searchBar" class="zstackParent">
+				<img src="Resources/Index Page/Search Bar Base.png" alt="Search Bar" width="600" height="63">
+				<form class="zstackCentreChild hstack" action="CollectionSearchPage.html" method="get">
+					<input id="searchInput" type="text" placeholder="Search for items and collections" autoComplete="off" name="searchInput">
+					<button type="submit" id="searchButton"><svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45"
+   height="45"
+   viewBox="0 0 500.00001 500.00001"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Search_Icon.svg">
+  <defs />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.954"
+     inkscape:cx="250"
+     inkscape:cy="250"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+    <rdf:rdf>
+      <cc:work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:work>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,-552.36216)">
+    <g
+       transform="translate(-4.3609793,-7.6704785)">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 232.83952,614.96702 A 154.04816,154.04794 0 0 0 78.79153,769.01382 154.04816,154.04794 0 0 0 232.83952,923.06184 154.04816,154.04794 0 0 0 386.88751,769.01382 154.04816,154.04794 0 0 0 232.83952,614.96702 Z m 0,26.77613 A 129.95832,127.2707 0 0 1 362.79832,769.01382 129.95832,127.2707 0 0 1 232.83952,896.28449 129.95832,127.2707 0 0 1 102.88194,769.01382 129.95832,127.2707 0 0 1 232.83952,641.74315 Z"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         ry="18.08342"
+         rx="33.249443"
+         transform="matrix(0.65316768,0.7572133,-0.60689051,0.79478545,0,0)"
+         y="319.55432"
+         x="794.8775"
+         height="36.16684"
+         width="173.02675"
+         style="opacity:1;fill:#343537;fill-opacity:1;stroke:none;stroke-opacity:1" />
+    </g>
+  </g>
+</svg></button>
+				</form>
+				<script>
+					if (searchInput != false) {
+						document.getElementById("searchInput").value = searchInput.split("+").join(" ");
+					}
+				</script>
+			</div>
+		</div>
+	</div>
+		<div id="noResultsAlert">
+		<img src="Resources/Search Page/No Results Image.png" alt="Sad Face" width="125px" style="padding-bottom: 45px" class="hCentre">
+		<p>Sorry, we couldn't find any results</p>
+	</div>
+	<div id="products" style="width: 90%;" class="hCentre">
+		<div id ="productRow" class="hstack productRow zstackParent" style="margin-top: 20%;">
+			<img src="Resources/Category Page/Collection Frame.png" width="100%" alt="Collection frame" class="zstackCentreChild" style="z-index: -1">
+			<div id="topCollectionTitle" style="z-index: -1">
+				<h3 id="topCollectionTitleText" class="zstackLeftChild" style="left: 5%"><span1 id="topCollectionName">Collection</span1><span id="topCollectionPrice">⟁#</span></h3>
+			</div>
+			<div class="productRow">
+				<a id="productOutput" class="placeholderProduct" href="#" style="width: 25%;margin-top: 5%;">
+					<div class="vstack" style="align-items:baseline;">
+						<img id="productImage" src="Resources/Category Page/Item.png" alt="itemImage" width="100%">
+						<p1 id="productName" >Placeholder</p1>
+						<p2 id="productPrice" >⟁10</p2>
+					</div>
+				</a>
+				<spacer id="productSpacer" class="placeholderProduct" style="width: 6.75%"></spacer>
+			</div>
+		</div>
+	</div>
+	<div style="margin-bottom: 12%;"></div>
+	<div id="footer">
+		<img src="Resources/Footer/Footer Fade 1.png" alt="Footer Fade" width="100%" height="8">
+		<img src="Resources/Footer/Footer Fade 2.png" alt="Footer Fade" width="100%" height="8">
+		<div class="zstackParent">
+			<img src="Resources/Footer/Footer Base.png" alt="Footer Base" width="100%" height="72">
+	   		<div id="footerItems" class="zstackLeftChild hstack">
+				<spacer style="width:3%"></spacer>
+				<img src="Resources/Footer/Footer Logo and Icon.png" alt="Pixelloid Logo" style="width:20%;">
+	    		<spacer style="width:50%"></spacer>
+	    		<a href="AboutPage.html"><h5>About</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	    		<a href="ContactPage.html"><h5>Contact</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	    		<a href="SitemapPage.html"><h5>Sitemap</h5></a>
+	    		<spacer style="width:3%"></spacer>
+	   	 		<a href="T&CsPage.html"><h5>T&amp;Cs</h5></a>
+				<spacer style="width:3%"></spacer>
+	   		</div>
+		</div>
+	</div>
+	<script>
+		let productRowsNumber = Math.floor(productsOfCollectionResults.length / 4);
+		for (let i = 0; i < (productRowsNumber - 1); i++) {
+			const newProductRow = document.getElementById("productRow").cloneNode(true);
+			let idName = "productRow" + String((i + 1));
+			let collectionPrice = 0;
+			for (let i=((productRowsNumber - 1)* 4); i < ((productRowsNumber - 1)* 4+4); i++) {
+				collectionPrice += ((products[((productsOfCollectionResults[i])[0])])["price"]);
+			}
+			newProductRow.id = idName;
+			newProductRow.childNodes[3].childNodes[1].childNodes[0].innerHTML = collectionResults[i+1][0];
+			newProductRow.childNodes[3].childNodes[1].childNodes[1].innerHTML = "⟁" + collectionPrice;
+			document.getElementById("products").appendChild(newProductRow);
+		}
+		var currentRowNumber = 0;
+		var firstCollectionPrice = 0;
+		productsOfCollectionResults.forEach(outputProduct);
+		function outputProduct(value, index) {
+			let count = index;
+			if (count != 0) {
+				if (count % 4 == 0) {
+					currentRowNumber += 1;
+				}
+			}
+			if (currentRowNumber == 0) {
+				var rowNumberId = "productRow";
+				document.getElementById("topCollectionName").innerHTML = collectionResults[0][0];
+				firstCollectionPrice += products[value[0]]["price"];
+				document.getElementById("topCollectionPrice").innerHTML = "⟁" + firstCollectionPrice;
+			} else {
+				var rowNumberId = "productRow" + String(currentRowNumber);
+			}
+			document.getElementById("productName").textContent = value[0];
+			document.getElementById("productPrice").textContent = "⟁" + products[value[0]]["price"];
+			document.getElementById("productImage").src = products[value[0]]["thumbnail"];
+			document.getElementById("productOutput").href = products[value[0]]["detailsLink"];
+			let productSpacer = document.getElementById("productSpacer").cloneNode(true);
+			productSpacer.classList.remove("placeholderProduct");
+			let newListedProduct = document.getElementById("productOutput").cloneNode(true);
+			newListedProduct.classList.remove("placeholderProduct");
+			let currentRow = document.getElementById(rowNumberId);
+			currentRow.appendChild(productSpacer);
+			currentRow.appendChild(newListedProduct);
+			if ((count + 1) % 4 == 0) {
+				let lastProductSpacer = document.getElementById("productSpacer").cloneNode(true);
+				lastProductSpacer.classList.remove("placeholderProduct");
+				currentRow.appendChild(lastProductSpacer);
+			}
+			if (productRowsNumber == (Math.floor(count / 4))) {
+				for (let i = 0; i < (((productRowsNumber + 1) * 4) - (count + 1)); i++) {
+					let extraProductSpacer = document.getElementById("productSpacer").cloneNode(true);
+					extraProductSpacer.classList.remove("placeholderProduct");
+					extraProductSpacer.style.width = "31.75%";
+					currentRow.appendChild(extraProductSpacer);
+				}
+				let extraLastProductSpacer = document.getElementById("productSpacer").cloneNode(true);
+				extraLastProductSpacer.classList.remove("placeholderProduct");
+				extraLastProductSpacer.style.width = "6.75%";
+				currentRow.appendChild(extraLastProductSpacer);
+			}
+		}
+		
+		let placeholders = document.getElementsByClassName("placeholderProduct");
+		while(placeholders.length > 0){
+      		placeholders[0].parentNode.removeChild(placeholders[0]);
+    	}
+		if (collectionResults.length == 0) {
+			document.getElementById("products").remove();
+		} else {
+			document.getElementById("noResultsAlert").remove();
+		}
+		document.getElementById("productRow").style.marginTop = "5%";
+		
+		if (searchInput == false) {
+			console.log(true);
+			document.getElementById("products").remove();
+			document.getElementById("noResultsAlert").remove();
+		}
+	</script>
+</body>
+</html>

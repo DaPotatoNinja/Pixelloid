@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		* {
+			margin:0;
+		}
+		body {
+			overflow: hidden; /* Hide scrollbars */
+		}
+	</style>
+	<meta charset="UTF-8">
+	<title>ProductImage</title>
+	<script src="Products.js"></script>
+	<script>
+		const imageInput = getQueryVariable("image");
+		const image = imageInput.split("+").join(" ")
+	</script>
+	<link rel="icon" href="Resources/Favicon/Pixelloid icon.png">
+</head>
+
+<body>
+	<img id="image" alt="Product Image" width="100%" height="100%">
+	<script>
+		document.getElementById("image").src = "Resources/Product Images/" + image;
+	</script>
+</body>
+</html>
