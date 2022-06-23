@@ -509,7 +509,7 @@ const products  = {
 };
 
 for (var productID in products) {
-	(products[productID])["detailsLink"] = "file:///Users/aaronbeder/Desktop/Year%2010/IST/Web%20Development/Web%20Design%20Assessment/Pixelloid/ProductDetails.html?product=" + productID.split(" ").join("+");
+	(products[productID])["detailsLink"] = "ProductDetails.html?product=" + productID.split(" ").join("+");
 	(products[productID])["thumbnail"] = "Resources/Product Images/" + productID+".png";
 	if ((products[productID])["slides"] == undefined) {
 		(products[productID])["slides"] = [];
