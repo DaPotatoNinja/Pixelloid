@@ -2,6 +2,7 @@
 
 * {
 	margin:0;
+	font-size: 0.695vw;
 }
 
 img {
@@ -12,7 +13,7 @@ img {
 
 h2 {
 	font-family: "Roboto Bold", Roboto;
-	font-size: 30px;
+	font-size: 3.25em;
 	color: #343537
 }
 
@@ -23,7 +24,7 @@ a {
 h1 {
 	color: #0C0C0C;
 	font-family: 'Transducer Medium', Transducer;
-	font-size: 85px;
+	font-size: 8.5em;
 	font-weight: normal;
 }
 
@@ -41,13 +42,13 @@ p1 {
 	padding-top: 5%;
 	color: #2A2A2A;
 	font-family: 'Roboto', Roboto;
-	font-size: 25px;
+	font-size: 2.5em;
 }
 
 p2 {
 	color: #2A2A2A;
 	font-family: 'Roboto Light', Roboto;
-	font-size: 20px;
+	font-size: 2em;
 }
 
 .fixed {
@@ -138,7 +139,7 @@ p2 {
 
 #footerItems a h5 {
 	font-family: "Roboto Medium", Roboto;
-	font-size: 30px;
+	font-size: 3em;
 	color: #343537
 }
 
@@ -151,27 +152,29 @@ p2 {
 	left: 50%;
 	transform: translate(-50%);
 }
-
 #Top Collection Title {
 	left: 500px;
 }
 
 #topCollectionTitle h3 {
 	font-family: "EthnocentricRg-Regular", Ethnocentric;
-	font-size: 30px;
 	color: #2A2A2A;
 }
 
-#topCollectionTitle h3 span {
+#topCollectionName {
+	font-size: 3em;
+}
+
+#topCollectionPrice {
 	font-family: "Roboto Black", Roboto;
-	font-size: 30px;
+	font-size: 3em;
 	color: #2A2A2A;
 	padding-left: 4%;
 }
 
 #allCollectionsText h3 {
 	font-family: "EthnocentricRg-Regular", Ethnocentric;
-	font-size: 20px;
+	font-size: 2em;
 	color: #2A2A2A;
 }
 
@@ -181,16 +184,15 @@ p2 {
 
 #noResultsAlert p {
 	font-family: 'Bitcount Mono Single Bold Square', Bitcount; 
-	font-size: 30px; 
+	font-size: 3em; 
 	color: #0C0C0C;
-	position: relative;
-	bottom: 22px;
 	text-align: center;
+	padding-bottom: 5%;
 }
 
 #searchInput {
 	font-family: 'Roboto Regular', Roboto;
-	font-size: 26px; 
+	font-size: 2.6em; 
 	color: #343537;
 	padding-left: 10px;
 	padding-right: 10px;

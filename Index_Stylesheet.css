@@ -1,6 +1,7 @@
 
 * {
-  margin:0;
+	margin:0;
+	font-size: 0.695vw;
 }
 
 img {
@@ -11,8 +12,8 @@ display: block;
 
 h2 {
 	font-family: "Roboto Bold", Roboto;
-	font-size: 30px;
-	color: #343537
+	font-size: 3.25em;
+	color: #343537;
 }
 
 a {
@@ -52,10 +53,6 @@ a {
 	align-items: center;
 }
 
-/*.Header_items a:active {
-	filter: drop-shadow(0px 0px 0px rgba(52, 53, 55, 0));
-}*/
-
 .lightColors {
 	--primaryColor: #F2F2F2;
 	--secondaryColor: #0C0C0C;
@@ -71,33 +68,33 @@ a {
 .categoryTitle h3 {
 	color: var(--primaryColor);
 	font-family: 'Transducer Regular', Transducer;
-	font-size: 97.5px;
+	font-size: 9.75em;
 	font-weight: normal
 }
 
 .categoryTitle h4 {
 	color: var(--primaryColor);
 	font-family: 'Transducer Hairline', Transducer;
-	font-size: 18.75px;
+	font-size: 1.875em;
 	text-align: center;
 }
 
 .categoryTitle h5 {
 	font-family: 'EthnocentricRg-Regular', Ethnocentric;
-	font-size: 20px;
+	font-size: 2em;
 	text-align: center;
 	color: var(--secondaryColor);
 }
 
 #gallery h5 {
 	font-family: 'EthnocentricRg-Regular', Ethnocentric;
-	font-size: 20px;
+	font-size: 2em;
 	text-align: center;
 	color: #F2F2F2;
 }
 
 .categoryTitle a {
-	padding-top: 25px
+	padding-top: 11.5%
 }
 
 .categoryTitle a:hover {
@@ -120,22 +117,22 @@ a {
 
 #worldsCategoryTitle {
 	width: inherit;
-	margin-left: -20%;
-	margin-bottom: 80%;
+	margin-left: -35%;
+	margin-bottom: 120%;
 }
 
 #catchphrasesCategoryTitle {
-	margin-left: -25%;
-	margin-top: -8%;
+	margin-left: -25.5%;
+	margin-top: -10%;
 }
 
 #comboCategoryPanel h3 {
-	font-size: 78px;
+	font-size: 7.8em;
 }
 
 #entitiesCategoryTitle {
-	margin-left: 25%;
-	margin-top: -8%;
+	margin-left: 25.5%;
+	margin-top: -10%;
 	width: auto;
 }
 
@@ -170,7 +167,7 @@ a {
 
 #footerItems a h5 {
 	font-family: "Roboto Medium", Roboto;
-	font-size: 30px;
+	font-size: 3em;
 	color: #343537
 }
 
@@ -180,13 +177,13 @@ a {
 
 #searchInput {
 	font-family: 'Roboto Regular', Roboto;
-	font-size: 26px; 
+	font-size: 2.6em; 
 	color: #343537;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 	width: 83.5%;
 	border: none;
-	margin: 5px;
+	margin: 1.25%;
 }
 
 #searchInput:focus {

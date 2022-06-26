@@ -24,7 +24,7 @@ h1 {
 
 h2 {
 	font-family: "Roboto Bold", Roboto;
-	font-size: 3.25em;
+	font-size: 3em;
 	color: #343537
 }
 
@@ -45,30 +45,27 @@ a:hover {
 p1 {
 	color: #404040;
 	font-family: 'EthnocentricRg-Regular', Ethnocentric;
-	font-size: 3.5em;
+	font-size: 35px;
 }
 
 p2 {
 	color: #3B3C3F;
 	font-family: 'Roboto Regular', Roboto;
-	font-size: 3em;
+	font-size: 30px;
 }
 
 ul {
 	color: #343537;
 	font-family: 'Roboto Regular', Roboto;
-	margin-top: 2.5%;
+	font-size: 30px;
+	margin-top: 20px;
 }
 
 ol {
 	color: #343537;
 	font-family: 'Roboto Regular', Roboto;
+	font-size: 30px;
 }
-
-li {
-	font-size: 3em;
-}
-
 
 .hCentre {
 	position: relative;
@@ -165,16 +162,16 @@ li {
 }
 
 .section {
-	margin-bottom: 7.5%;
+	margin-bottom: 50px;
 }
 
 .subheading {
-	padding-top: 1%;
+	padding-top: 25px;
 }
 
 .text {
-	padding-top: 2.5%;
-	padding-bottom: 2.5%;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	margin-right: 5%;
 	width: 100%;
 }
@@ -186,33 +183,31 @@ li {
 
 .aboutImage {
 	width: 20%;
-	border-radius: 3em;
-	margin-top: 3%;
+	border-radius: 30px;
+	margin-top: 25px;
 }
 
 input {
 	width: 100%;
-	height: 2.75em;
-	border-radius: 0.75em;
+	height: 63px;
+	border-radius: 15px;
 	border-color: #343537;
-	border-width: 0.1em;
+	border-width: 2px;
 	border-style: solid;
 	font-family: 'Roboto Regular', Roboto;
-	font-size: 2.5em;
-	text-indent: 2.5%;
+	font-size: 25px;
 }
 
 textarea {
 	width: 100%;
-	height: 10em;
-	border-radius: 0.75em;
+	height: 221px;
+	border-radius: 15px;
 	border-color: #343537;
-	border-width: 0.1em;
+	border-width: 2px;
 	border-style: solid;
 	font-family: 'Roboto Regular', Roboto;
-	font-size: 2.5em;
-	padding-top: 2%;
-	text-indent: 2.5%;
+	font-size: 25px;
+	padding-top: 5px;
 }
 
 input:focus, textarea:focus {

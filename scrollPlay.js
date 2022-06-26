@@ -13,7 +13,6 @@ if (searchInput == "Pixels") {
 	document.getElementById("navBar").classList.add("navBarUnfixedNoVid");
 	document.getElementById("pageContent").classList.add("pageContentVisible");
 	document.getElementById("topPanel").style.height = window.innerHeight + "px";
-    document.getElementById("categoryTitle").style.fontSize = window.innerHeight / 9 + "px";
 }
 
 
@@ -29,7 +28,6 @@ function scrollPlay(){
 	document.getElementById("navBar").classList.add("navBarUnfixed");
 	document.getElementById("pageContent").classList.add("pageContentVisible");
 	document.getElementById("topPanel").style.height = window.innerHeight + "px";
-    document.getElementById("categoryTitle").style.fontSize = window.innerHeight / 9 + "px";
   } else {
       document.getElementById("v0").classList.add("fixed");
       document.getElementById("v0").classList.remove("moveOn");

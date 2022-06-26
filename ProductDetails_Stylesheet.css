@@ -1,17 +1,18 @@
 
 * {
-  margin:0;
+	margin:0;
+	font-size: 0.695vw;
 }
 
 img {
-max-width: 100%;
-height: auto;
-display: block;
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 h1 {
 	font-family: "Transducer Medium", Transducer;
-	font-size: 60px;
+	font-size: 6em;
 	color: #0C0C0C;
 	margin-top: -1%;
 	margin-bottom: 2%;
@@ -20,53 +21,53 @@ h1 {
 
 h2 {
 	font-family: "Roboto Bold", Roboto;
-	font-size: 30px;
+	font-size: 3.25em;
 	color: #343537;
 }
 
 h3 {
 	font-family: "EthnocentricRG-Regular", Ethnocentric;
-	font-size: 30px;
+	font-size: 3em;
 	color: #707070;
 	font-weight: normal;
 }
 
 h4 {
 	font-family: "Roboto Medium", Roboto;
-	font-size: 35px;
+	font-size: 3.5em;
 	color: #343537;
 	font-weight: normal;
 }
 
 p1 {
 	font-family: "Roboto Regular", Roboto;
-	font-size: 20px;
+	font-size: 2em;
 	color: #343537;
 	font-weight: normal;
 }
 
 p2 {
 	font-family: "Roboto Medium", Roboto;
-	font-size: 20px;
+	font-size: 2em;
 	color: #343537;
 	font-weight: normal;
 }
 
 p3 {
 	font-family: "Roboto Light", Roboto;
-	font-size: 20px;
+	font-size: 2em;
 	color: #343537;
 }
 
 p4 {
 	font-family: "Roboto Bold", Roboto;
-	font-size: 30px;
+	font-size: 3em;
 	font-weight: bold;
 }
 
 p5 {
 	font-family: "Roboto Regular", Roboto;
-	font-size: 12px;
+	font-size: 1.2em;
 	color: #343537;
 	font-weight: normal;
 }
@@ -226,7 +227,7 @@ a {
 
 #footerItems a h5 {
 	font-family: "Roboto Medium", Roboto;
-	font-size: 30px;
+	font-size: 3em;
 	color: #343537
 }
 
@@ -325,7 +326,7 @@ a {
 	width: 10%;
 	height: 15%;
 	font-family: "Roboto Bold", Roboto;
-	font-size: 35px;
+	font-size: 3.5em;
 	font-weight:500;
 	color: #343537;
 	border: none;
@@ -333,8 +334,4 @@ a {
 
 #quantityInput:focus {
 	outline-width: 0;
-}
-
-#bagButton {
-	opacity: 0;
 }
