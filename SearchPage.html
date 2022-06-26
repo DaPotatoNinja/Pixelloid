@@ -380,13 +380,15 @@
 		</div>
 	</div>
 	<script>
+		if (searchInput == "") {
+			document.getElementById("Top Collection").remove();
+			document.getElementById("products").remove();
+			document.getElementById("noResultsAlert").remove();
+			document.getElementById("footer").style.paddingTop = "10.3%";
+		}
 		if ((mainResults == undefined) || (mainResults == 0)) {
 			document.getElementById("Top Collection").remove();
 			document.getElementById("products").remove();
-			if (mainResults == undefined) {
-				document.getElementById("noResultsAlert").remove();
-				document.getElementById("footer").style.paddingTop = "11%";
-			}
 		} else {
 			document.getElementById("noResultsAlert").remove();
 		}
